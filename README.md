@@ -4,18 +4,18 @@ Análisis exploratorio y territorial de la primera vuelta de las elecciones pres
 
 ## Contenido
 
-- limpieza y clasificación de registros;
-- resultados nacionales y porcentajes;
-- análisis por departamento y municipio;
-- márgenes de victoria;
-- detección exploratoria de valores atípicos;
-- exportación de tablas y visualizaciones;
-- dashboard interactivo con Streamlit.
+- Limpieza y clasificación de registros.
+- Resultados nacionales y porcentajes.
+- Análisis por departamento y municipio.
+- Márgenes de victoria.
+- Detección exploratoria de valores atípicos.
+- Exportación de tablas y visualizaciones.
+- Dashboard interactivo con Streamlit.
 
 ## Estructura
 
 ```text
-colombia-election-analysis-2018-completo/
+colombia-election-analysis-2018/
 ├── data/
 │   ├── 2018_presidencia_primera_vuelta.dta.csv
 │   └── processed/
@@ -23,7 +23,7 @@ colombia-election-analysis-2018-completo/
 │   └── app.py
 ├── images/
 ├── notebooks/
-│   └── 02_analisis_electoral_completo.ipynb
+│   └── analisis_electoral_2018.ipynb
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -39,8 +39,8 @@ pip install -r requirements.txt
 
 ## Ejecución
 
-1. Abra y ejecute el notebook.
-2. Después ejecute el dashboard:
+1. Abra y ejecute todo el notebook.
+2. Después ejecute el dashboard desde la raiz:
 
 ```bash
 streamlit run dashboard/app.py
