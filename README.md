@@ -1,51 +1,111 @@
-# Colombia Election Analysis 2018
+# Análisis de las elecciones presidenciales de Colombia de 2018
 
-Análisis exploratorio y territorial de la primera vuelta de las elecciones presidenciales de Colombia de 2018.
+Proyecto de análisis exploratorio y territorial de los resultados de la primera vuelta presidencial de Colombia de 2018.
 
-## Contenido
+## Objetivo
 
-- Limpieza y clasificación de registros.
-- Resultados nacionales y porcentajes.
-- Análisis por departamento y municipio.
-- Márgenes de victoria.
-- Detección exploratoria de valores atípicos.
-- Exportación de tablas y visualizaciones.
-- Dashboard interactivo con Streamlit.
+Analizar la distribución de los votos por candidato, departamento y municipio, identificar territorios competitivos y examinar concentraciones elevadas del voto sin atribuirles causas que no puedan demostrarse con el conjunto de datos.
 
-## Estructura
+## Estructura del proyecto
 
 ```text
-colombia-election-analysis-2018/
+analisis-elecciones-colombia-2018/
+│
 ├── data/
-│   ├── 2018_presidencia_primera_vuelta.dta.csv
-│   └── processed/
-├── dashboard/
-│   └── app.py
-├── images/
+│   ├── raw/               Datos originales sin modificar
+│   └── processed/         Tablas generadas por el análisis
+│
 ├── notebooks/
 │   └── analisis_electoral_2018.ipynb
-├── .gitignore
+│
+├── dashboard/
+│   ├── streamlit/         Aplicación interactiva
+│   └── powerbi/           Dashboard de Power BI
+│
+├── reports/
+│   └── figures/           Gráficas exportadas
+│
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
 ```
 
-## Instalación
+## Tecnologías
 
-```bash
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+- Streamlit
+- Power BI
 
 ## Ejecución
 
-1. Abra y ejecute todo el notebook.
-2. Después ejecute el dashboard desde la raiz:
+### 1. Crear y activar el entorno virtual
 
-```bash
-streamlit run dashboard/app.py
+En PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 ```
 
-## Advertencia
+### 2. Instalar las dependencias
 
-Los valores atípicos identificados por métodos estadísticos son señales exploratorias. No constituyen evidencia de fraude ni de irregularidad electoral.
+```powershell
+pip install -r requirements.txt
+```
+
+### 3. Ejecutar el análisis
+
+Abrir en VS Code o Jupyter el archivo:
+
+```text
+notebooks/analisis_electoral_2018.ipynb
+```
+
+Ejecutar todas las celdas desde el inicio.
+
+El notebook:
+
+- carga los datos desde `data/raw/`;
+- guarda las tablas procesadas en `data/processed/`;
+- exporta las gráficas a `reports/figures/`.
+
+### 4. Ejecutar el dashboard de Streamlit
+
+Después de ejecutar el notebook y generar las tablas procesadas:
+
+```powershell
+streamlit run dashboard/streamlit/app.py
+```
+
+## Alcance metodológico
+
+Los resultados muestran patrones descriptivos de votación. Una concentración elevada del voto en un candidato no constituye por sí sola evidencia de una irregularidad electoral.
+
+El conjunto de datos no incluye el potencial electoral municipal. Por esta razón, no permite calcular correctamente la tasa de participación ni identificar municipios donde votó menos del 25 % del censo electoral.
+
+Las conclusiones del proyecto se limitan a los patrones observados en los resultados electorales disponibles.
+
+## Fuente de datos
+
+Datos obtenidos del Centro de Estudios en Democracia y Asuntos Electorales — CEDAE:
+
+https://cedae.datasketch.co/
+
+Archivo utilizado:
+
+```text
+data/raw/2018_presidencia_primera_vuelta.dta.csv
+```
+
+
+## Dashboard interactivo en Streamlit
+
+La aplicación permite consultar los resultados nacionales y explorar la información por departamento, municipio y ciudades principales.
+
+![Dashboard de Streamlit](reports/figures/dashboard_streamlit.png)

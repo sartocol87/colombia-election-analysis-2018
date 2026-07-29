@@ -1,5 +1,12 @@
-.venv/
 __pycache__/
+*.py[cod]
 .ipynb_checkpoints/
-*.pyc
+.venv/
+venv/
+env/
 .DS_Store
+Thumbs.db
+
+# Archivos temporales generados localmente
+data/processed/*.csv
+!data/processed/.gitkeep
