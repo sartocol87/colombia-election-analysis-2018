@@ -109,3 +109,13 @@ data/raw/2018_presidencia_primera_vuelta.dta.csv
 La aplicación permite consultar los resultados nacionales y explorar la información por departamento, municipio y ciudades principales.
 
 ![Dashboard de Streamlit](reports/figures/dashboard_streamlit.png)
+
+## Dashboard
+
+### Resumen nacional
+
+![Dashboard nacional](reports/figures/dashboard_nacional.png)
+
+### Análisis municipal
+
+![Dashboard municipal](reports/figures/dashboard_municipal.png)
