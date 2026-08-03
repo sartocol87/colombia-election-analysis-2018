@@ -7,6 +7,4 @@ env/
 .DS_Store
 Thumbs.db
 
-# Archivos temporales generados localmente
-data/processed/*.csv
-!data/processed/.gitkeep
+
