@@ -1,5 +1,12 @@
 # Análisis de las elecciones presidenciales de Colombia de 2018
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-EDA-150458?logo=pandas&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-Visualization-F2C811?logo=powerbi&logoColor=black)
+![Dashboard](reports/figures/dashboard_nacional.png)
+
+
 Proyecto de análisis exploratorio y territorial de los resultados de la primera vuelta presidencial de Colombia de 2018.
 
 ## Objetivo
